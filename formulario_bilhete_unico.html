@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trabalho interdisciplinar, DSM">
+    <meta name="keywords" content="Trabalho interdisciplinar, DSM, Sistema de Solicitação para a Secretaria">
+    <meta name="author" content="Grupo 8, DSM">
+    <script src="validacao.js"></script>
+    <title>Fomulário Bilhete Unico</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/fonte.js"></script>
+    <script src="js/cep.js"></script>
+    <script src="js/validacao.js"></script>
+    <script src="js/contraste.js"></script>
+    <script src="js/mascara.js"></script>
+</head>
+<body>
+    <header id="topo">
+        <div id="acessibilidade">
+            <ul id="atalhos">
+                <li><a href="#conteudo_bilhete_bom" accesskey="1" title="Ir diretamente para o conteúdo">Ir para o conteúdo [1]</a></li>
+                <li><a href="#menu" accesskey="2" title="Ir diretamente para o menu">Ir para o menu [2]</a></li>
+                <li><a href="#rodape" accesskey="3" title="Ir diretamente para o rodapé">Ir para o rodapé [3]</a></li>
+                
+                <li id="pgacess"><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">ACESSIBILIDADE</a></li>
+    
+                <li class="contraste"><a href="javascript:void(0);" id="contraste">CONTRASTE PRETO</a></li>
+                <li class="contraste"><a href="javascript:void(0);" id="sem_contraste">SEM CONTRASTE</a></li>
+                <li class="fonte"><a href="javascript:void(0);" id="aumentar">A+</a></li>
+                <li class="fonte"><a href="javascript:void(0);" id="diminuir">A-</a></li>
+            </ul>
+        </div>
+        <img class="logo" src="imagem/logoFatecZL.png" alt="Imagem com a palavra Fatec Zona Leste em branco">
+        <h1>SECRETARIA FATEC ZONA LESTE</h1>
+        <img class="logo-sp" src="imagem/Logo_junto.png" alt="Imagem com a palavra São Paulo Governo do Estado em branco">
+        <nav>
+            <label for="bt_menu"><img src="imagem/menu.png" alt="menu"></label>
+            <input type="checkbox" id="bt_menu">
+            <ul id="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="javascript:void(0);">Grade</a>
+                    <ul>
+                        <li><a href="analise_e_desenvolvimento_de_sistemas.html">Análise e Desenvolvimento de
+                                Sistemas</a></li>
+                        <li><a href="comercio_exterior.html">Comercio Exterior</a></li>
+                        <li><a href="desenvolvimento_de_produtos_plasticos.html">Desenvolvimento de Produtos
+                                Plásticos</a></li>
+                        <li><a href="desenvolvimento_de_software_multiplataforma.html">Desenvolvemento de Software
+                                Multiplataforma</a></li>
+                        <li><a href="gestao_de_recursos_humanos.html">Gestão de Recursos Humanos</a></li>
+                        <li><a href="gestao_empresarial.html">Gestão Empresarial</a></li>
+                        <li><a href="gestao_empresarial_EAD.html">Gestão Empresarial EAD</a></li>
+                        <li><a href="logistica.html">Logistica</a></li>
+                        <li><a href="polimeros.html">Polímeros</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="javascript:void(0);">Requerimento</a>
+                    <ul>
+                        <li><a href="requerimento_ao_coordenador.html">Requerimento ao Coordenador</a></li>
+                        <li><a href="requerimento_ao_diretor.html">Requerimento ao Diretor</a></li>
+                        <li><a href="requerimento_data_de_prova.html">Requerimento de Data de Prova</a></li>
+                        <li><a href="requerimento_de_trancamento_de_matricula.html">Requerimento de Trancamento de
+                                Matrícula</a></li>
+                        <li><a href="requerimento_de_cancelamento_de_matricula.html">Requerimento de Cancelamento de
+                                Matrícula</a></li>
+                        <li><a href="requerimento_para_a_secretaria.html">Requerimento Para a Secretaria</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">Solicitação</a>
+                    <ul>
+                        <li><a href="solicitacao_de_documentos.html">Solicitação de Documentos</a></li>
+                        <li><a href="formulario_bilhete_unico.html">Formulário Bilhete Único</a></li>
+                        <li><a href="formulario_bilhete_bom.html">Formulário Bilhete BOM</a></li>
+                        <li><a href="prazo.html">Prazo de entrega de documento</a></li>
+                    </ul>
+                </li>
+                <li><a href="regulamentos.html">Regulamentos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="calendario.html">Calendário Acadêmico</a></li>
+            </ul>
+            
+        </nav>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+    </header>
+    <ul class="breadcrumb">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="javascript:void(0);">Solicitação</a></li>
+        <li class="breadcrump_pagatual">Formulario Bilhete Unico
+        </li>
+    </ul>
+
+    <main id="conteudo_bilhete_bom">
+        <section class="form_bilhetes">   
+         <form id="valida" id="valida" method="post" onsubmit="return validar();">
+             <h2>Bilhete Único - Fatec Zona Leste</h2>
+            <fieldset class="fieldset_bilhete">
+                <legend>Dados Pessoais</legend>
+                    <label for="nome" class="required">  Nome </label><br>
+                    <input type="text" name="nome" id="nome" required
+                    placeholder="Nome Completo"><br>
+                    <label for="cpf"  class="required">CPF</label><br>
+                    <input type="text" name="cpf" id="cpf" required
+                    placeholder="999.999.999-99"><br>
+                    <label for="rg"  class="required" >RG</label><br>
+                    <input type="text" name="rg" id="rg" required
+                    placeholder="99.999.999-99"><br>
+                    <label for="emissao"  class="required" >Emissão</label><br>
+                    <input type="text" name="emissao" id="emissao" required
+                    placeholder="Local de emissao"><br>
+                    <label for="uf"  class="required" >UF</label><br>
+                    <input type="text" name="uf" id="uf" required
+                    placeholder="Unidade Federativa"><br>
+                    <label for="nomemae" class="required">Nome Mãe</label><br>
+                    <input type="text" name="nomemae" id="nomemae" required
+                    placeholder="Nome da mãe"><br>
+                    <label for="data"  class="required">Data de nascimento</label><br>
+                    <input type="date" name="data" id="data" required><br>
+                    <label for = "email"  class="required">Email</label><br>
+                    <input type="email" name="email" id="email"
+                    required placeholder="nome@site.com.br"><br>
+                    <label for="telefone" class="required">Telefone Residencial</label><br>
+                    <input type="text" name="telefone" id="telefone" required
+                    placeholder="(99)9999-9999" ><br>
+                    <label for = "celular" class="required">Celular</label><br>
+                    <input type="text" name="celular" id="celular" required
+                    placeholder="(99)9999-9999"><br>
+            </fieldset>
+            <fieldset class="fieldset_bilhete">
+                <legend>Endereço</legend>
+                    <label for="cep" class="required">CEP</label><br>
+                    <input type="text" name="cep" id="cep" required
+                    placeholder="99999-999"><br>
+                    <label for="rua">Endereço</label><br>
+                    <input type="text" name="rua" id="rua"><br>
+                    <label for="bairro">Bairro</label><br>
+                    <input type="text" name="bairro" id="bairro"><br>
+                    <label for="cidade">Cidade</label><br>
+                    <input type="text" name="cidade" id="cidade"><br>
+                    <label for="estado">Estado</label><br>
+                    <input type="text" name="estado" id="estado"><br>
+                    <label for="complemento">Complemento</label><br>
+                    <input type="text" name="complemento" id="complemento"><br>
+                    <label for="curso" class="required">Curso</label><br>
+                    <input type="text" name="curso" id="curso" required
+                     placeholder="Curso"><br>
+                     <label for="turno" class="required">Turno</label><br>
+                    <input type="text" name="turno" id="turno" required
+                     placeholder="turno"><br>
+                     <label for="semestre" class="required">Semestre</label><br>
+                    <input type="text" name="semestre" id="semestre" required
+                    placeholder="semestre"><br>
+                    <label for="datapedido"  class="required" >Data do pedido</label><br>
+                    <input type="date" name="datapedido" id="datapedido" required><br>
+                    <label for="tipodetarifa" class="required">Tipo de Tarifa</label><br>
+                    <input type="text" name="tipodetarifa" id="tipodetarifa" required
+                    placeholder="tipo de tarifa"><br>
+            </fieldset>
+            <fieldset class="fieldset_bilhete">
+                <legend>Aceite</legend>
+                <p>Atenção: Alunos regularmente matriculado o seu cadastro será inserido no sistema da SPTRANS em até 
+                05 dias utéis. Deverá acompnhar a sua solicitação pelo site da SPTRANS.</p> 
+                <p>Declaro e confirmo que todas as informações pretadas neste formulário e sua autenticidade. São de plena responsabilidade minha e estou ciente de que a falsidade nas informações
+                prestadas implicará nas penaslidades cabíveis.*</p>      
+                <p id="checkbox-cor"><input type="checkbox" value="" class="checkbox-1">Ciente e confirmo as informações desse formulário</p>   
+            </fieldset>   
+            <input type="submit" name="enviar" id="enviar" value="::.Enviar.::">
+        </form> 
+          </section> 
+    </main>
+    <footer id="rodape">	
+        <div class="grid_rodape">
+            <div class="grid_rede_social">
+                <h6>Redes Sociais</h6>  
+                <a href="https://www.facebook.com/fateczl.oficial/">
+                <img src="imagem/facebook_blue.png" alt="Icone facebook" class="icone_rede"></a>
+                <a href="https://www.instagram.com/fateczl.oficial/">
+                <img src="imagem/instagram_blue.png" alt="Icone instagram" class="icone_rede"></a>
+                <a href="https://twitter.com/Fateczl_oficial">
+                <img src="imagem/twitter_blue.png" class="icone_rede" alt="icone do twitter"></a>
+                <a href="https://www.linkedin.com/company/faculdade-de-tecnologia-zona-leste-fatec-zl/">
+                <img src="imagem/linkedin_blue.png" alt="Icone linkedin" class="icone_rede"></a>
+                <a href="https://www.youtube.com/channel/UCe04vfzsQcRrGgfaWyx-GoA">
+                <img src="imagem/youtube_blue.png" alt="Icone youtube" class="icone_rede"></a>
+                
+        </div>
+            <div class="grid_nome_unidade"><h6>Faculdade de Tecnologia da Zona Leste</h6>
+                <br><p>Endereço Avenida Águia de Haia, 2983. Cidade A.E. Carvalho, CEP 03694-000, São Paulo-SP.</p>
+                <p>Telefone (11) 2049-2600 (11) 2026-0378 (11) 2026-1303 (11) 2041-2187</p> </div> 
+        </div>
+        <div class="grid_desenvolvido">
+            <p>
+                Desenvolvido por Ana Caroline, Bruno Bodê, Gabriella de Moraes, Gustavo Vito, Rômulo Oliveira. <br>
+                Desenvolvimento WEB professor Edson Junior 2021&copy;.  
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
